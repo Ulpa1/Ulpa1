@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main (){
+    int l, c, p, i=0, n=0, t=0,cont=0;
+    cin>>l>>c;
+    int a[l][c];
+    while (n<c){
+        while(i<l){
+            cin>>a[i][n];
+            i++;
+        }
+        n++;
+    }
+    n=0;
+    i=0;
+    cin>>p;
+    int pl,pc;
+    while(i<=p) {
+        cin>>pl>>pc;
+        if (a[pl-1][pc-1] > 0){
+            a[pl-1][pc-1] = a[pl-1][pc-1] - 1;
+            t++;
+
+        }
+        i++;
+    }
+    cout<<t;
+}
